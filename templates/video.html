@@ -1,0 +1,15 @@
+<div class="p-12">
+  {% for video in videos %}
+  <div class="flex odd:bg-slate-300">
+    <div class="w-full">{{video.name}}</div>
+    <div id="process-result-{{video.id}}"></div>
+    <button
+      class="bg-blue-400 p-4 text-white"
+      hx-get="/process-video?url={{video.url}}"
+      hx-target="#process-result-{{video.id}}"
+    >
+      Process
+    </button>
+  </div>
+  {% endfor %}
+</div>

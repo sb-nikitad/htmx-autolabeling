@@ -1,0 +1,31 @@
+Flask
+requests
+
+yacs
+
+opencv-python
+
+# Ultralytics (YOLOv5) dependencies are typically managed via their own requirements, but keeping general compatibility
+ultralytics
+
+# TensorFlow and PyTorch; aligning CUDA dependencies might require adjusting versions
+tensorflow==2.5.0 
+torch==1.10.1
+torchvision==0.11.2
+pyyaml==5.4 
+
+# FFmpeg for video processing
+ffmpeg-python==0.2.0
+
+# Data analysis and machine learning libraries
+pandas==1.2.0 
+scikit-learn==0.24.0 
+scikit-video
+
+# Visualization libraries
+matplotlib
+seaborn
+
+# Performance monitoring and progress bars
+psutil
+tqdm
