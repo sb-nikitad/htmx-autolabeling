@@ -121,7 +121,7 @@ def load_baseball_models():
     return models
 
 def update_logs():
-    print('Updating logs')
+    # print('Updating logs')
     if os.path.exists("/mnt/nas01/Uploads/videos/SSL_Videos/Auto_Labelling_Results/AutoLabel_Web/logs.csv"):
         logs_df = pd.read_csv("/mnt/nas01/Uploads/videos/SSL_Videos/Auto_Labelling_Results/AutoLabel_Web/logs.csv")
     else:
@@ -226,4 +226,4 @@ if __name__ == "__main__":
 
     demo.queue(concurrency_count=1)
     app = gr.mount_gradio_app(app, demo, path=CUSTOM_PATH)
-    uvicorn.run(app, host="0.0.0.0", port=40040, log_level="debug")
+    uvicorn.run(app, host="0.0.0.0", port=40040, log_level="critical") 

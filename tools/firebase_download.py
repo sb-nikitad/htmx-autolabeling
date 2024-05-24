@@ -30,7 +30,7 @@ def download_latest_videos(size = 2, start_timestamp = None, end_timestamp = Non
     }
 
     headers = {
-    "Authorization": os.environ["API_KEY"],
+    "Authorization": "aFwkNaGuqvEIHtP-M6LQDTNevSF=XfPMJm-GxVT/osOMZwn8HIZEZGH?64S7IwPB",
     }
 
     # Make the POST request

@@ -28,7 +28,7 @@ import torchvision.transforms as transforms
 from pose_hrnet import get_pose_net
 from config import cfg
 from config import update_config
-from swing_stage_detection import swing_stage_detection
+# from swing_stage_detection import swing_stage_detection
 
 import scipy.stats
 import random
@@ -516,8 +516,7 @@ def videos_processing(conf_thresh, confidence_club, dataDir, aiDir, output_path,
         try:
             swing_stages = json.load(open(os.path.join(aiDir, f'{path}_ai.json')))
             stages = swing_stages['swing']
-        except Exception as e:
-            print(f'Error: {e}')
+        except:
             tag = '2DSSL_Invalid'
             videoTags.append(tag)
             logs = logs.append({'video_name': video_name, 'video_name_shortened': video_name_shortened, 'video_url': 'unknown', 'confidence_score': 'unknown', 'tag_initial': 'unknown', 'tag_assigned': tag}, ignore_index=True)
